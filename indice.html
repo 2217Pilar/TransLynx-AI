@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Empresa TransLynx AI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #8c4966;
+      color: white;
+    }
+
+    section {
+      margin: 40px 20px;
+      display: none;
+    }
+
+    h2 {
+      color: #003366;
+    }
+
+    p {
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .logo {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      width: 100px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #23bac4;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      color: white;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .btn-navegacion {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #8c4966;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .media {
+      margin-top: 20px;
+    }
+
+    .media img, .media video {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>TransLynx AI</h1>
+  </header>
+
+  <!-- Logo fijo -->
+  <img src="LOGOEM.jpeg" alt="Logo de la empresa" class="logo" />
+
+  <!-- Ventana 1: Misión y Visión -->
+  <section id="pantalla1" class="active">
+    <h2>Misión</h2>
+    <p>Ofrecer una plataforma web innovadora que permita a los usuarios digitalizar y traducir de manera rápida y precisa sus documentos e imágenes mediante el uso de inteligencia artificial avanzada.</p>
+
+    <h2>Visión</h2>
+    <p>Ser la plataforma líder en digitalización y traducción de documentos, mejorando continuamente nuestras capacidades tecnológicas para ofrecer soluciones más rápidas, precisas y seguras.</p>
+
+    <button class="btn-navegacion" onclick="mostrarPantalla('pantalla2')">Ver Descripción</button>
+  </section>
+
+  <!-- Ventana 2: Descripción del Producto -->
+  <section id="pantalla2">
+    <h2>Descripción</h2>
+    <p><strong>Producto:</strong> TransLynx AI es una plataforma web avanzada diseñada para la digitalización y traducción automática de documentos e imágenes, utilizando tecnologías de inteligencia artificial de vanguardia.</p>
+    
+    <p><strong>Empresa:</strong> TransLynx IA presenta el desarrollo de su interfaz web y estructura técnica, centrada en ofrecer una experiencia de usuario clara, segura y funcional.</p>
+
+    <div class="media">
+      <h3>Video demostrativo del funcionamiento del software:</h3>
+      <video controls>
+        <source src="VSOF.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video.
+      </video>
+
+      <h3>Imagenes demostrativas del software:</h3>
+      <img src="LOGIN.jpeg" alt="Captura de sistema en el inicio de sesion" />
+      <img src="FUNCIONAMIENTO.jpeg" alt="Captura de sistema de traduccion de documentos" />
+    </div>
+
+    <button class="btn-navegacion" onclick="mostrarPantalla('pantalla1')">Volver a Misión y Visión</button>
+  </section>
+
+  <footer>
+    &copy; 2025 TransLynx AI. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    function mostrarPantalla(id) {
+      document.getElementById('pantalla1').classList.remove('active');
+      document.getElementById('pantalla2').classList.remove('active');
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
